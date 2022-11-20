@@ -21,6 +21,7 @@ model User{
     type String
 
     company Company?
+    courier Courier?
 }
 
 model Company{
@@ -40,7 +41,7 @@ model Company{
     userId Int @unique
 }
 
-model Shipper{
+model Courier{
     id Int @id @default(autoincrement())
     summaryIntro String
 
@@ -54,4 +55,7 @@ model Shipper{
     identification String? // NID or Student ID or something like that
 
     transportation String
+
+    user User @relation(fields: [userId], references: [id])
+    userId Int @unique
 }
