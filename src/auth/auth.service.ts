@@ -104,7 +104,8 @@ export class AuthService {
 				id: true,
 				name: true,
 				email: true,
-				phone: true
+				phone: true,
+				type: true
 			}
 		});
 		if (!user) {
