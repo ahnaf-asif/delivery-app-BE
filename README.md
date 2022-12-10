@@ -9,3 +9,5 @@
 * Run `npx prisma migrate dev`
 
 * Run `npm run start:dev`
+
+localhost:8000/auth/signin
